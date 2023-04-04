@@ -4,24 +4,17 @@ on:
   workflow_dispatch:
     branches:
       - main
-
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: npm
-      - uses: webfactory/ssh-agent@v0.5.0
-        with:
-          ssh-private-key: ${{ secrets.GH_PAGES_DEPLOY }}
-      - name: Deploy to GitHub Pages
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Build and Deploy
+        uses: JamesIves/github-pages-deploy-action@master
         env:
-          USE_SSH: true
-        run: |
-          git config --global user.email "421099982@qq.com"
-          git config --global user.name "binbin"
-          npm ci
-          npm run deploy
+          ACCESS_TOKEN: ${{ secrets.GH_PAGES_DEPLOY }}
+          BRANCH: gh-pages
+          FOLDER: build
+          BUILD_SCRIPT: npm install && npm run build
