@@ -26,7 +26,10 @@ jobs:
           access-key: ${{ secrets.AK }} # 七牛云 AccessKey 备注2
           secret-key: ${{ secrets.SK }} # 七牛云 SecretKey 备注2
           base-folder: build # 本地文件夹
-
+          local_exclude: "**/node_modules/**" # 要排除的内容，要符合 glob 格式
+          target_dir: / # 要上传到七牛云中的文件夹
+          domain: "http://abc.io"
+          sub-domain: ""
 
       # - name: 执行上传 🚀
       #   uses: luochongfei/up2qn@master
