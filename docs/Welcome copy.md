@@ -1,12 +1,13 @@
 ---
 sidebar_position: 1
 ---
+
 <head>
   <script defer="defer" src="https://embed.trydyno.com/embedder.js"></script>
   <link href="https://embed.trydyno.com/embedder.css" rel="stylesheet" />
 </head>
 
-## 关于本教程
+## 关于本系统
 
 如果你不知道能拿 ChatGPT 或者其他 AI 产品来干什么；
 
@@ -94,8 +95,3 @@ sidebar_position: 1
 4. [Natural Language Processing with Deep Learning](http://web.stanford.edu/class/cs224n/slides/cs224n-2023-lecture11-prompting-rlhf.pdf)
 5. [edx ChatGPT101](https://www.edx.org/course/introduction-to-chatgpt)
 6. [OpenAI Examples](https://platform.openai.com/examples)
-
-
-
-
-

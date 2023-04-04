@@ -1,16 +1,16 @@
-import React from 'react';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Layout from '@theme/Layout';
+import React from "react";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import Layout from "@theme/Layout";
 
-import HeroSection from '../components/homepage/HeroSection';
-import HomeFooter from '../components/homepage/HomeFooter';
-import PrincipleSection from '../components/homepage/PrincipleSection';
+import HeroSection from "../components/homepage/HeroSection";
+import HomeFooter from "../components/homepage/HomeFooter";
+import PrincipleSection from "../components/homepage/PrincipleSection";
 
 export default function Home(): JSX.Element {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title={`${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
       <HeroSection />

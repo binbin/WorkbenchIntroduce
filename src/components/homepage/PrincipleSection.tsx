@@ -1,6 +1,6 @@
-import Link from '@docusaurus/Link';
-import React from 'react';
-import PRINCIPLES from '../../principles';
+import Link from "@docusaurus/Link";
+import React from "react";
+import PRINCIPLES from "../../principles";
 
 export default function PrincipleSection() {
   return (
@@ -8,7 +8,7 @@ export default function PrincipleSection() {
       <div className="mx-auto max-w-6xl">
         <h2 className="lg:text-3xl">基本介绍</h2>
 
-        <div className="no-underline-links mt-10 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <div className="no-underline-links mt-10 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           {PRINCIPLES.map((principle) => (
             <div
               className="group flex flex-col justify-between"
