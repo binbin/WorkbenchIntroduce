@@ -1,4 +1,4 @@
-name: 发布到gh-pages
+name: 发布到七牛
 
 on:
   workflow_dispatch:
@@ -13,16 +13,21 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Install and Build
+      - name: Install and Build 🚀
         run: |
           yarn install
           yarn run build
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+
+      - name: 执行上传 🚀
+        uses: luochongfei/up2qn@master
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: ./build
+          bucket: 51chifeng-cn # 空间名称，按实际情况填写
+          zone: 华北 # 存储区域，按实际情况填写 备注1
+          access_key: ${{ secrets.AK }} # 七牛云 AccessKey 备注2
+          secret_key: ${{ secrets.SK }} # 七牛云 SecretKey 备注2
+          local_dir: build # 本地文件夹
+          local_exclude: "**/node_modules/**" # 要排除的内容，要符合 glob 格式
+          target_dir: / # 要上传到七牛云中的文件夹
 # jobs:
 #   build-and-deploy:
 #     runs-on: ubuntu-latest
