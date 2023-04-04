@@ -19,28 +19,15 @@ jobs:
           yarn run build
 
       - name: 执行上传 🚀
-        uses: Hanlin-Dong/hexo-to-qiniu-action@v1
+        uses: luochongfei/up2qn@master
         with:
           bucket: 51chifeng-cn # 空间名称，按实际情况填写
           zone: 华北 # 存储区域，按实际情况填写 备注1
-          access-key: ${{ secrets.AK }} # 七牛云 AccessKey 备注2
-          secret-key: ${{ secrets.SK }} # 七牛云 SecretKey 备注2
-          base-folder: build # 本地文件夹
+          access_key: ${{ secrets.AK }} # 七牛云 AccessKey 备注2
+          secret_key: ${{ secrets.SK }} # 七牛云 SecretKey 备注2
+          local_dir: build # 本地文件夹
           local_exclude: "**/node_modules/**" # 要排除的内容，要符合 glob 格式
           target_dir: / # 要上传到七牛云中的文件夹
-          domain: "http://abc.io"
-          sub-domain: ""
-
-      # - name: 执行上传 🚀
-      #   uses: luochongfei/up2qn@master
-      #   with:
-      #     bucket: 51chifeng-cn # 空间名称，按实际情况填写
-      #     zone: 华北 # 存储区域，按实际情况填写 备注1
-      #     access_key: ${{ secrets.AK }} # 七牛云 AccessKey 备注2
-      #     secret_key: ${{ secrets.SK }} # 七牛云 SecretKey 备注2
-      #     local_dir: build # 本地文件夹
-      #     local_exclude: "**/node_modules/**" # 要排除的内容，要符合 glob 格式
-      #     target_dir: / # 要上传到七牛云中的文件夹
 # jobs:
 #   build-and-deploy:
 #     runs-on: ubuntu-latest
