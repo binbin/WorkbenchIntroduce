@@ -9,12 +9,12 @@ const tailwindPlugin = require("./plugins/tailwind-plugin.cjs");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "中心工作台",
-  scripts: [
-    {
-      src: "https://hm.baidu.com/hm.js?66d9b2c1629401a79d6b73414a42551d",
-      async: true,
-    },
-  ],
+  // scripts: [
+  //   {
+  //     src: "https://hm.baidu.com/hm.js?66d9b2c1629401a79d6b73414a42551d",
+  //     async: true,
+  //   },
+  // ],
 
   tagline: "集合多元，从此工作不再分心",
   url: "https://www.51chifeng.cn",
@@ -54,7 +54,15 @@ const config = {
     ],
   ],
 
-  plugins: [tailwindPlugin],
+  plugins: [
+    tailwindPlugin,
+    [
+      require.resolve("docusaurus-plugin-baidu-tongji"),
+      {
+        token: "66d9b2c1629401a79d6b73414a42551d",
+      },
+    ],
+  ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
