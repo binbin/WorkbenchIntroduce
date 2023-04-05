@@ -5,7 +5,7 @@ import PRINCIPLES from "../../principles";
 export default function PrincipleSection() {
   return (
     <section className="my-20 px-4">
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-7xl">
         <h2 className="lg:text-3xl">基本介绍</h2>
 
         <div className="no-underline-links mt-10 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
