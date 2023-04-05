@@ -12,7 +12,7 @@ export default function HomeFooter() {
     <footer className="bg-secondary-900">
       <div
         className={clsx(
-          "mx-auto flex max-w-7xl flex-col gap-4 px-10 pt-8 pb-1 lg:flex-row lg:items-center lg:gap-8"
+          "mx-auto flex max-w-8xl flex-col gap-4 px-10 pt-8 pb-1 lg:flex-row lg:items-center lg:gap-8"
         )}
       >
         <div className="flex items-center gap-3">
@@ -28,7 +28,7 @@ export default function HomeFooter() {
       </div>
       <div
         className={clsx(
-          "mx-auto flex max-w-7xl flex-col gap-4 px-10 pt-1 pb-8 lg:flex-row lg:items-center lg:gap-8"
+          "mx-auto flex max-w-8xl flex-col gap-4 px-10 pt-1 pb-8 lg:flex-row lg:items-center lg:gap-8"
         )}
       ></div>
     </footer>
