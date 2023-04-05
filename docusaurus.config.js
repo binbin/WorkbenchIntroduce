@@ -82,9 +82,9 @@ const config = {
           // },
           {
             type: "doc",
-            docId: "Welcome",
+            docId: "👋 简介",
             position: "left",
-            label: "使用指南",
+            label: "详细说明",
           },
           { to: "/blog", label: "产品资讯", position: "left" },
           {
